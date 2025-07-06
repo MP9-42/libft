@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 12:09:04 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/05 14:29:22 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/06 18:31:25 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,14 @@ char	*ft_strrchr(const char *s, int c)
 	int			i;
 	const char	*chr;
 
-	i = 0;
+	i = ft_strlen(s);
 	chr = NULL;
-	while (s[i] != '\0')
-	{
-		if ((unsigned char)s[i] == (unsigned char)c)
-			chr = &s[i];
-		i++;
-	}
+	while (i >= 0 && (unsigned char)s[i] != (unsigned char)c)
+		i--;
+	if ((unsigned char)s[i] == (unsigned char)c)
+		chr = &s[i];
 	if (c == '\0')
-		return ((char *)&s[i]);
+		return ((char *)&s[ft_strlen(s)]);
 	return ((char *)chr);
 }
 // int	main(void)

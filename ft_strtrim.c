@@ -1,34 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 15:47:00 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/06 17:32:44 by MP9              ###   ########.fr       */
+/*   Created: 2025/07/06 18:15:05 by MP9               #+#    #+#             */
+/*   Updated: 2025/07/06 18:15:48 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *s, int i, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char	*p;
-	int				c;
-
-	c = 0;
-	p = (unsigned char *)s;
-	while ((int)p[c] != '\0' && c < (int)n)
-	{
-		p[c] = i;
-		c++;
-	}
-	return (p);
+	
 }
-
-// int	main(void)
-// {
-// 	printf("%p\n", ft_memset("WASGEHTABB", 1, 8));
-// 	printf("%p\n", memset("WASGEHTABB", 1, 8));
-// }
