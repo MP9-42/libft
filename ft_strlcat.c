@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 11:52:21 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/04 13:48:13 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/05 14:20:47 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,16 @@ size_t	ft_strlcat(char *dest, const char *src, size_t s)
 		dl++;
 	while (src[sl] != '\0')
 		sl++;
-	if ((dl) == s)
+	if (dl >= s)
 		return (sl + s);
 	while (src[i] != '\0' && dl + i < s - 1)
 	{
 		dest[dl + i] = src[i];
 		i++;
 	}
-	dest[dl + i] = '\0';
-	return (dl + i);
+	if (dl + i < s)
+		dest[dl + i] = '\0';
+	return (dl + sl);
 }
 // int	main(void)
 // {

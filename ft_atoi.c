@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 12:27:13 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/04 12:53:40 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/05 14:06:59 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,21 @@
 
 int	ft_atoi(const char *str)
 {
-	int	v;
-	int	e;
+	int		v;
+	size_t	e;
 
 	v = 1;
 	e = 0;
-	while (*str == ' ' || *str == '\t' || *str == '\n')
+	if (!str)
+		return (0);
+	while ((*str >= 9 && *str <= 13) || *str == 32)
 		str++;
-	if (*str == '-')
-		v = v * (-1);
 	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			v = v * (-1);
 		str++;
+	}
 	while (*str >= '0' && *str <= '9')
 	{
 		e = e * 10 + (*str - '0');
@@ -35,7 +39,7 @@ int	ft_atoi(const char *str)
 
 // int	main(void)
 // {
-// 	printf("%d\n", atoi("+123"));
-// 	printf("%d\n", ft_atoi("+123"));
+// 	printf("%d\n", atoi("+\t\v\f\r\n \f1234"));
+// 	printf("%d\n", ft_atoi("+\t\v\f\r\n \f1234"));
 // 	return(0);
 // }

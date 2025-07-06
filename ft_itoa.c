@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 18:22:26 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/04 12:56:03 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/05 17:13:15 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	nbnb(int nb)
 	int	len;
 
 	len = 0;
-	if (nb <= 0)
+	if (nb < 0)
 		len++;
 	while (nb != 0)
 	{
@@ -31,24 +31,27 @@ char	*ft_itoa(int n)
 {
 	int		i;
 	char	*str;
+	long	nb;
 
 	if (n == 0)
 		return (ft_strdup("0"));
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
+	nb = n;
 	i = nbnb(n);
 	str = malloc(sizeof(char) * (i + 1));
 	if (!str)
 		return (NULL);
-	if (n < 0)
+	str[i] = '\0';
+	if (nb < 0)
 	{
 		str[0] = '-';
-		n = -n;
+		nb = -nb;
 	}
 	while (n != 0)
 	{
-		str[i--] = '0' + (n % 10);
-		n = n / 10;
+		str[--i] = '0' + (nb % 10);
+		nb = nb / 10;
 	}
 	return (str);
 }

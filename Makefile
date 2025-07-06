@@ -6,7 +6,7 @@
 #    By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/14 11:19:02 by MP9               #+#    #+#              #
-#    Updated: 2025/07/04 13:21:24 by MP9              ###   ########.fr        #
+#    Updated: 2025/07/06 16:25:03 by MP9              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,12 @@ CFLAGS	= -Wall -Wextra -Werror
 SRCFILES = ft_atoi ft_bzero ft_isalnum ft_isalpha \
 	ft_isascii ft_isdigit ft_isprint ft_itoa ft_memchr \
 	ft_memcmp ft_memset ft_putchar_fd ft_putendl_fd \
-	ft_itoa ft_putnbr_fd ft_putnbr ft_putstr_fd \
+	ft_putnbr_fd ft_putnbr ft_putstr_fd ft_memmove \
 	ft_strcat ft_strchr ft_strcmp ft_strcpy ft_strnstr \
 	ft_strncmp ft_strncpy ft_strstr ft_tolower ft_toupper \
-	ft_strlen ft_strdup
+	ft_strlen ft_strdup ft_strlcpy ft_strlcat ft_strrchr \
+	ft_calloc ft_memcpy ft_memchr ft_putnbr_fd \
+	ft_striteri ft_memmove ft_substr 
 
 
 SRCS 	= $(SRCFILES:=.c)

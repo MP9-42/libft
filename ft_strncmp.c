@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 17:26:27 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/04 13:44:07 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/05 14:37:52 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	while (s1[i] != '\0' && s1[i] == s2[i] && i < n)
 		i++;
-	return((unsigned char) s1 - (unsigned char) s2);
+	if (i == n)
+		return (0);
+	return ((unsigned char) s1[i] - (unsigned char) s2[i]);
 }
 
 // int	main(void)

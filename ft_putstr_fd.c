@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 13:00:05 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/04 13:19:02 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/05 16:59:04 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 void	ft_putstr_fd(const char *s, int fd)
 {
-	while (*s != '\0')
-	{
-		write(fd, s, ft_strlen(s));
-	}
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

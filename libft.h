@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 11:31:33 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/04 13:10:39 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/06 16:24:50 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,21 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	*ft_strncpy(char *dest, char *src, size_t n);
 char	*ft_strncat(char *dest, const char *src, size_t n);
 char	*ft_strdup(char *str);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strchr(const char *s, int c);
 char	*ft_itoa(int n);
+void	*ft_memset(void *s, int i, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_calloc(size_t count, size_t size);
+void	*ft_memmove(void *dst, const void *src, size_t len);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(const char *s, int fd);
 void	ft_bzero(void *s, size_t n);
 void	ft_putendl_fd(const char *s, int fd);
+void	ft_putnbr_fd(int nb, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
 #endif
