@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 11:31:33 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/06 18:11:18 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/07 15:07:29 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	*ft_strncpy(char *dest, char *src, size_t n);
 char	*ft_strncat(char *dest, const char *src, size_t n);
 char	*ft_strdup(char *str);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strcpy(char *dest, char *src);

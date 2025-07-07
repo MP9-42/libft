@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/06 11:19:18 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/07 12:50:51 by MP9              ###   ########.fr       */
+/*   Created: 2025/07/07 15:00:51 by MP9               #+#    #+#             */
+/*   Updated: 2025/07/07 15:35:37 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	char			*str;
+	unsigned int	i;
 
 	i = 0;
-	while (s[i] && s[i] != (char) c)
+	if (!s || !f)
+		return (NULL);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		str[i] = f(i, s[i]);
 		i++;
-	if (s[i] == (char) c)
-		return ((char *)&s[i]);
-	return (NULL);
+	}
+	str[i] = '\0';
+	return (str);
 }
-// int	main(void)
-// {
-// 	printf("%s\n", strchr("WasG3ht", '\0'));
-// 	printf("%s\n", ft_strchr("WasG3ht", '\0'));
-// }
