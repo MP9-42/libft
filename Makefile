@@ -6,7 +6,7 @@
 #    By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/14 11:19:02 by MP9               #+#    #+#              #
-#    Updated: 2025/07/07 15:07:45 by MP9              ###   ########.fr        #
+#    Updated: 2025/07/08 19:09:12 by MP9              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRCFILES = ft_atoi ft_bzero ft_isalnum ft_isalpha \
 	ft_strlen ft_strdup ft_strlcpy ft_strlcat ft_strrchr \
 	ft_calloc ft_memcpy ft_memchr ft_putnbr_fd ft_strjoin \
 	ft_striteri ft_memmove ft_substr ft_strtrim ft_strmapi \
+	ft_split
 	
 
 

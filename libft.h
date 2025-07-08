@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/14 11:31:33 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/07 15:07:29 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/08 19:09:01 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ char	*ft_strcpy(char *dest, char *src);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_itoa(int n);
+char	**ft_split(const char *s, char c);
 void	*ft_memset(void *s, int i, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
