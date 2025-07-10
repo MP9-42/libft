@@ -6,7 +6,7 @@
 #    By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/14 11:19:02 by MP9               #+#    #+#              #
-#    Updated: 2025/07/08 19:09:12 by MP9              ###   ########.fr        #
+#    Updated: 2025/07/09 15:39:17 by MP9              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,12 @@ SRCFILES = ft_atoi ft_bzero ft_isalnum ft_isalpha \
 	ft_striteri ft_memmove ft_substr ft_strtrim ft_strmapi \
 	ft_split
 	
+BONUS_SRCFILES = 
 
-
-SRCS 	= $(SRCFILES:=.c)
-OBJS	= $(SRCFILES:=.o)
+BONUS_SRCS	= $(BONUS_SRCFILES:=.c)
+BONUS_OBJS	= $(BONUS_SRCFILES:=.o)
+SRCS 		= $(SRCFILES:=.c)
+OBJS		= $(SRCFILES:=.o)
 
 NAME	= libft.a
 
@@ -41,12 +43,15 @@ $(NAME): $(OBJS)
 
 clean:
 	rm -rf $(OBJS)
-	@echo "object files cleaned."
+	@echo "$(RED)object files cleaned.$(RESET)"
 
 fclean: clean
 	rm -f $(NAME)
 	@echo "library and object files cleaned."
 
 re: fclean all
+
+bonus: ${OBJS} ${BONUS_OBJS}
+		ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
 
 .PHONY: all clean fclean re bonus
