@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 15:47:00 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/09 14:37:56 by MP9              ###   ########.fr       */
+/*   Created: 2025/07/09 17:50:00 by MP9               #+#    #+#             */
+/*   Updated: 2025/07/14 16:39:59 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int i, size_t n)
+t_list *ft_lstnew(void *content)
 {
-	unsigned char	*p;
-	size_t			c;
 
-	c = 0;
-	p = (unsigned char *)s;
-	while (c < n)
-	{
-		p[c] = (unsigned char)i;
-		c++;
-	}
-	return (p);
 }
-
-// int	main(void)
-// {
-// 	printf("%p\n", ft_memset("WASGEHTABB", 1, 8));
-// 	printf("%p\n", memset("WASGEHTABB", 1, 8));
-// }
