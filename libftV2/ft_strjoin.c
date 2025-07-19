@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/13 15:30:04 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/17 20:58:55 by MP9              ###   ########.fr       */
+/*   Created: 2025/07/17 17:55:28 by MP9               #+#    #+#             */
+/*   Updated: 2025/07/17 19:04:59 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	char	*joinstr;
+	size_t	len;
+	size_t	i;
+	size_t	i2;
 
-	i = ft_strlen(s);
-	while (i >= 0)
+	i = 0;
+	i2 = 0;
+	len = (ft_strlen(s1) + ft_strlen(s2));
+	joinstr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!joinstr)
+		return (NULL);
+	while (s1[i] != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		joinstr[i] = s1[i];
+		i++;
 	}
-	return (0);
+	while (s2[i2] != '\0')
+	{
+		joinstr[i] = s2[i2];
+		i++;
+		i2++;
+	}
+	joinstr[i] = '\0';
+	return (joinstr);
 }
-
-// int	main()
-// {
-// 	char 
-// 	return (0);
-// }
