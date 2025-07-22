@@ -6,13 +6,11 @@
 #    By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/10 13:08:28 by MP9               #+#    #+#              #
-#    Updated: 2025/07/19 20:39:53 by MP9              ###   ########.fr        #
+#    Updated: 2025/07/20 18:06:19 by MP9              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-BONUSNAME = libft_bonus.a
 
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \

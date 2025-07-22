@@ -6,18 +6,13 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/10 13:08:44 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/10 15:13:55 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/20 20:11:39 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	unsigned char	l;
-
-	l = (unsigned char)c;
-	if ((c > 64 && c < 91) || (c > 96 && c < 123))
-		return (1);
-	return (0);
+	return ((c > 64 && c < 91) || (c > 96 && c < 123));
 }
 
 // int	main()

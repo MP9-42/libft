@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 20:23:08 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/19 21:13:59 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/20 17:19:24 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*tmp_list;
 	t_list	*tmp_node;
-	void	*content;
+	void	*new_content;
 
 	tmp_list = NULL;
 	tmp_node = NULL;
@@ -24,11 +24,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		return (NULL);
 	while (lst)
 	{
-		content = f(lst->content);
-		tmp_node = ft_lstnew(f(content));
+		new_content = f(lst->content);
+		tmp_node = ft_lstnew(new_content);
 		if (!tmp_node)
 		{
-			del(content);
+			del(new_content);
 			ft_lstclear(&tmp_list, del);
 			return (NULL);
 		}
