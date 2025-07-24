@@ -6,7 +6,7 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 18:12:28 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/24 14:59:12 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/24 15:01:35 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	ft_lstadd_back(t_list **lst, t_list *newlst)
 {
 	t_list	*tmp;
 
-	if (!lst || !new)
+	if (!lst || !newlst)
 		return ;
 	if (*lst == NULL)
 	{
-		*lst = new;
+		*lst = newlst;
 		return ;
 	}
 	tmp = ft_lstlast(*lst);
-	tmp->next = new;
+	tmp->next = newlst;
 }
