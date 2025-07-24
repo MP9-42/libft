@@ -6,13 +6,13 @@
 /*   By: MP9 <mikjimen@student.42heilbronn.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 18:12:28 by MP9               #+#    #+#             */
-/*   Updated: 2025/07/19 19:27:59 by MP9              ###   ########.fr       */
+/*   Updated: 2025/07/24 14:59:12 by MP9              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *newlst)
 {
 	t_list	*tmp;
 
